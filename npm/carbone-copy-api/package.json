@@ -1,5 +1,5 @@
 {
-  "name": "carbone-copy-api",
+  "name": "@bcgov/carbone-copy-api",
   "version": "1.0.0",
   "description": "Express API for calling Carbone with a file caching layer.",
   "main": "index.js",
@@ -11,16 +11,30 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/parc-jason/carbone-render-api.git"
+    "url": "git+https://github.com/bcgov/common-services-team-library.git"
   },
+  "author": "NR Common Service Showcase <NR.CommonServiceShowcase@gov.bc.ca>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bcgov/common-services-team-library/issues"
+  },
+  "homepage": "https://bcgov.github.io/common-services-team-library",
+  "contributors": [
+    {
+      "name": "Jason Sherman",
+      "email": "jsherman@parcsystems.ca"
+    },
+    {
+      "name": "Tim Csaky",
+      "email": "tim.csaky@gov.bc.ca"
+    }
+  ],
   "keywords": [
     "carbone",
     "express",
     "file-cache",
     "carbone-render"
   ],
-  "author": "",
-  "license": "Apache-2.0",
   "dependencies": {
     "@bcgov/carbone-render": "^1.0.0",
     "@bcgov/file-cache": "^1.0.0",
