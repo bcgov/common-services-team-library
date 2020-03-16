@@ -22,6 +22,8 @@
   "author": "",
   "license": "Apache-2.0",
   "dependencies": {
+    "@bcgov/carbone-render": "^1.0.0",
+    "@bcgov/file-cache": "^1.0.0",
     "api-problem": "^6.0.1",
     "bytes": "^3.1.0",
     "express": "^4.17.1",

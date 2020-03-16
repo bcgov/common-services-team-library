@@ -8,8 +8,8 @@ const telejson = require('telejson');
 const fileUpload = require('./upload');
 const validation = require('./validation');
 
-const carboneRenderer = require('carbone-render');
-const FileCache = require('file-cache');
+const carboneRenderer = require('@bcgov/carbone-render');
+const FileCache = require('@bcgov/file-cache');
 
 const CACHE_DIR = process.env.CACHE_DIR || '/tmp/carbone-files';
 const UPLOAD_FIELD_NAME = process.env.UPLOAD_FIELD_NAME || 'template';
@@ -65,6 +65,7 @@ const renderTemplate = async (template, req, res) => {
 
   try {
     formatters = telejson.parse(req.body.formatters);
+    // eslint-disable-next-line no-empty
   } catch (e) {
   }
 
