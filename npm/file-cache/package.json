@@ -1,6 +1,6 @@
 {
-  "name": "file-cache",
-  "version": "0.1.0",
+  "name": "@bcgov/file-cache",
+  "version": "1.0.0",
   "description": "Simple file storage that generates hashes for stored files",
   "main": "index.js",
   "scripts": {
@@ -8,15 +8,25 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/parc-jason/carbone-render-api.git"
+    "url": "git+https://github.com/bcgov/common-services-team-library.git"
   },
+  "author": "NR Common Service Showcase <NR.CommonServiceShowcase@gov.bc.ca>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bcgov/common-services-team-library/issues"
+  },
+  "homepage": "https://bcgov.github.io/common-services-team-library",
+  "contributors": [
+    {
+      "name": "Jason Sherman",
+      "email": "jsherman@parcsystems.ca"
+    }
+  ],
   "keywords": [
     "file",
     "storage",
     "hash"
   ],
-  "author": "",
-  "license": "Apache-2.0",
   "dependencies": {
     "fs-extra": "^8.1.0",
     "uuid": "^7.0.2"
