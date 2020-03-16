@@ -1,0 +1,36 @@
+{
+  "name": "carbone-copy-api",
+  "version": "1.0.0",
+  "description": "Express API for calling Carbone with a file caching layer.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parc-jason/carbone-render-api.git"
+  },
+  "keywords": [
+    "carbone",
+    "express",
+    "file-cache",
+    "carbone-render"
+  ],
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "api-problem": "^6.0.1",
+    "bytes": "^3.1.0",
+    "express": "^4.17.1",
+    "fs-extra": "^8.1.0",
+    "mime-types": "^2.1.26",
+    "minimist": "^1.2.5",
+    "multer": "^1.4.2",
+    "telejson": "^3.3.0",
+    "tmp": "^0.1.0",
+    "validator": "^12.2.0"
+  }
+}

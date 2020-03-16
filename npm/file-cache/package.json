@@ -1,0 +1,24 @@
+{
+  "name": "file-cache",
+  "version": "0.1.0",
+  "description": "Simple file storage that generates hashes for stored files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parc-jason/carbone-render-api.git"
+  },
+  "keywords": [
+    "file",
+    "storage",
+    "hash"
+  ],
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "fs-extra": "^8.1.0",
+    "uuid": "^7.0.2"
+  }
+}

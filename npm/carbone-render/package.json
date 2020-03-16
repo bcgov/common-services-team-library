@@ -1,0 +1,28 @@
+{
+  "name": "carbone-render",
+  "version": "0.1.0",
+  "description": "Async wrapper around Carbone render",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parc-jason/carbone-render-api.git"
+  },
+  "keywords": [
+    "carbone",
+    "carbone-render",
+    "template",
+    "render",
+    "docgen",
+    "doc-generation"
+  ],
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "carbone": "^1.2.1",
+    "fs-extra": "^8.1.0",
+    "uuid": "^7.0.2"
+  }
+}
