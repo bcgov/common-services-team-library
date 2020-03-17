@@ -11,7 +11,7 @@ Please review their documentation.
 ### important
 This application will require LibreOffice installed - it requires LibreOffice to do pdf generation.  
 
-See image: [alpine-node-libreoffice](https://hub.docker.com/repository/r/bcgovimages/alpine-node-libreoffice).
+See image: [alpine-node-libreoffice](https://hub.docker.com/r/bcgovimages/alpine-node-libreoffice).
   
 
 ### usage

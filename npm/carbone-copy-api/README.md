@@ -4,7 +4,8 @@ This is a wrapper around [carbone](https://carbone.io), please refer to their do
 
 ### important
 This library will require LibreOffice installed.  It requires LibreOffice to do pdf generation.  
-  
+
+See image: [alpine-node-libreoffice](https://hub.docker.com/r/bcgovimages/alpine-node-libreoffice).  
 
 ### usage
 
