@@ -1,0 +1,36 @@
+{
+  "name": "carbone-render-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon ./bin/www",
+    "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcgov/common-services-team-library.git"
+  },
+  "author": "NR Common Service Showcase <NR.CommonServiceShowcase@gov.bc.ca>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bcgov/common-services-team-library/issues"
+  },
+  "homepage": "https://bcgov.github.io/common-services-team-library",
+  "contributors": [
+    {
+      "name": "Jason Sherman",
+      "email": "jsherman@parcsystems.ca"
+    }
+  ],
+  "dependencies": {
+    "@bcgov/carbone-copy-api": "^1.0.0",
+    "api-problem": "^6.0.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
