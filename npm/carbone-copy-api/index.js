@@ -4,6 +4,7 @@ const mime = require('mime-types');
 const path = require('path');
 const Problem = require('api-problem');
 const telejson = require('telejson');
+const _ = require('lodash');
 
 const fileUpload = require('./upload');
 const validation = require('./validation');
@@ -26,7 +27,7 @@ const DEFAULT_OPTIONS = {
 };
 
 let fileCache;
-
+let mountPath = '/';
 
 const truthy = (name, obj = {}) => {
   const value = obj[name] || false;
@@ -226,7 +227,7 @@ router.get('/health', (_req, res) => {
 
 router.get('/docs', (_req, res) => {
   const docs = require('./docs/docs');
-  res.send(docs.getDocHTML('v1'));
+  res.send(docs.getDocHTML(mountPath, 'v1'));
 });
 
 router.get('/api-spec.yaml', (_req, res) => {
@@ -254,24 +255,62 @@ let initialized = false;
 module.exports = {
 
   init(options) {
-    if (!options) {
-      options = DEFAULT_OPTIONS;
+
+    let _options = DEFAULT_OPTIONS;
+    if (options) {
+      _options = {..._options, ...options};
     }
 
-    fileCache = new FileCache({fileCachePath: options.fileUploadsDir});
-    validation.init(options);
-    fileUpload.init(options);
+    fileCache = new FileCache({fileCachePath: _options.fileUploadsDir});
+    validation.init(_options);
+    fileUpload.init(_options);
 
-    if (truthy('startCarbone', options)) {
+    if (truthy('startCarbone', _options)) {
       carboneRenderer.startFactory();
     }
     initialized = true;
   },
 
-  routes() {
+  routes(options) {
     if (!initialized) {
-      this.init();
+      this.init(options);
     }
     return router;
+  },
+
+  mount(app, path, options) {
+    if (!initialized) {
+      this.init(options);
+    }
+
+    // expressPath starts with a / ends without /
+    // mountPath ends with /
+    let expressPath = path || '/';
+    if (_.isString(expressPath)) {
+      if (!expressPath.startsWith('/')){
+        expressPath = '/' + expressPath;
+      }
+      if (expressPath.length > 1) {
+        if (expressPath.endsWith('/')) {
+          mountPath = expressPath;
+          expressPath = expressPath.slice(0, -1);
+        } else {
+          mountPath = expressPath + '/';
+        }
+      } else {
+        mountPath = expressPath;
+      }
+    } else {
+      throw Error('Could not mount carbone-copy-api, path parameter is not a string.');
+    }
+
+    try {
+      app.use(expressPath, router);
+    } catch (e) {
+      if (e && e.stack) {
+        console.log(e.stack);
+      }
+      throw Error(`Could not mount carbone-copy-api to express app at ${path}`);
+    }
   }
 };

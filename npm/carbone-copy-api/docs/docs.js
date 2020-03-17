@@ -1,5 +1,5 @@
 const docs = {
-  getDocHTML: version => `<!DOCTYPE html>
+  getDocHTML: (mountPath, version) => `<!DOCTYPE html>
   <html>
     <head>
       <title>Carbone Copy API - Documentation ${version}</title>
@@ -19,7 +19,7 @@ const docs = {
       </style>
     </head>
     <body>
-      <redoc spec-url='/api-spec.yaml'></redoc>
+      <redoc spec-url='${mountPath}api-spec.yaml'></redoc>
       <script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"> </script>
     </body>
   </html>`
