@@ -32,7 +32,10 @@
       "unix"
     ],
     "no-unused-vars": [
-      "error", {"argsIgnorePattern": "^_"}
+      "error",
+      {
+        "argsIgnorePattern": "^_"
+      }
     ],
     "quotes": [
       "error",

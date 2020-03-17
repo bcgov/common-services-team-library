@@ -74,7 +74,7 @@ module.exports = {
           case 'LIMIT_UNEXPECTED_FILE':
             next(new Problem(400, 'Upload file error', {detail: 'Upload encountered an unexpected file'}));
             break;
-          // we don't expect that we will encounter these in our api/app, but here for completeness
+            // we don't expect that we will encounter these in our api/app, but here for completeness
           case 'LIMIT_PART_COUNT':
             next(new Problem(400, 'Upload file error', {detail: 'Upload rejected: upload form has too many parts'}));
             break;

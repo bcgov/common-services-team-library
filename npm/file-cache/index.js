@@ -67,7 +67,7 @@ class FileCache {
       const files = fs.readdirSync(hashPath);
       if (!files || files.length !== 1) {
         result.errorType = 404;
-        result.errorMsg = `Hash found; could not read file from cache.`;
+        result.errorMsg = 'Hash found; could not read file from cache.';
         return result;
       } else {
         result.name = files[0];

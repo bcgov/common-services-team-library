@@ -287,7 +287,7 @@ module.exports = {
     // mountPath ends with /
     let expressPath = path || '/';
     if (_.isString(expressPath)) {
-      if (!expressPath.startsWith('/')){
+      if (!expressPath.startsWith('/')) {
         expressPath = '/' + expressPath;
       }
       if (expressPath.length > 1) {
