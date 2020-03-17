@@ -4,11 +4,13 @@ const Problem = require('api-problem');
 
 const carboneCopyApi = require('@bcgov/carbone-copy-api');
 
+let apiBasePath = process.env.API_PATH || '/';
+
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use('/', carboneCopyApi.routes());
+carboneCopyApi.mount(app, apiBasePath);
 
 // Handle 500
 app.use((err, req, res, _next) => {

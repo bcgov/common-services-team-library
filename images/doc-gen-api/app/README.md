@@ -27,6 +27,7 @@ Configuration is set by environment variables.
 | UPLOAD\_FILE\_SIZE | Limit size of template files. Uses the [bytes](https://www.npmjs.com/package/bytes) library for parsing values.  Default is '25MB'|
 | UPLOAD\_FILE\_COUNT | Limit the number of files uploaded per call.  Default is 1, not recommended to use any other value. |
 | START\_CARBONE | If true, then the carbone converter will be started on application start. This will ensure that the first call to /render will not incur the overhead of starting the converter. Default is 'true' |
+| API\_PATH | Path to mount carbone-copy-api.  Default is '/' (root of server). |
 | APP\_PORT | Port number to run express application.  Default is 8000. |
 
 #### environment variables example
@@ -36,12 +37,13 @@ export UPLOAD_FIELD_NAME = 'templateFile'
 export UPLOAD_FILE_SIZE = '50MB'
 export UPLOAD_FILE_COUNT = 1
 export START_CARBONE = 'true'
-export APP_PORT = 8000
+export API_PATH = '/api/v1/'
+export APP_PORT = 3030
 
 npm run start
 ```
 
 
 #### review api at /docs
-Once mounted, view the Open API spec at http://localhost:8000/docs (if started like the above example). 
+Once mounted, view the Open API spec at http://localhost:3030/api/v1/docs (if started like the above example). 
 
