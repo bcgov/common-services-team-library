@@ -10,7 +10,7 @@ This library will require LibreOffice installed.  It requires LibreOffice to do 
 #### install/initialize
 
 ``` 
-npm i carbone-render
+npm i @bcgov/carbone-render
 ...
 const carboneRenderer = require('@bcgov/carbone-render');
 ```

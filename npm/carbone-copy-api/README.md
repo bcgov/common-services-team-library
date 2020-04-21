@@ -12,7 +12,7 @@ See image: [alpine-node-libreoffice](https://hub.docker.com/r/bcgovimages/alpine
 #### install
 
 ``` 
-npm i carbone-copy-api
+npm i @bcgov/carbone-copy-api
 ```
 
 ### configuration
