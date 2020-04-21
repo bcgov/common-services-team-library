@@ -11,7 +11,7 @@ The hash is created when writing the binary contents to disk.  Each file will ge
 
 ### install
 ```
-npm i file-cache
+npm i @bcgov/file-cache
 ```
 
 ### configuration
