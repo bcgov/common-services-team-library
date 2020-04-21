@@ -29,7 +29,7 @@ There are several configuration variables that allow for customization.
 
 #### pass in options
 ```
-const carboneCopyApi = require('carbone-copy-api');
+const carboneCopyApi = require('@bcgov/carbone-copy-api');
 
 const options = {
    fileUploadsDir: '/tmp/my-application-holding/files',
@@ -51,7 +51,7 @@ export UPLOAD_FILE_COUNT = 1
 export START_CARBONE = 'true'
 
 ...
-const carboneCopyApi = require('carbone-copy-api');
+const carboneCopyApi = require('@bcgov/carbone-copy-api');
 carboneCopyApi.init();
 ```
 
@@ -67,7 +67,7 @@ carboneCopyApi.init();
 #   startCarbone: true
 #
 
-const carboneCopyApi = require('carbone-copy-api');
+const carboneCopyApi = require('@bcgov/carbone-copy-api');
 carboneCopyApi.init();
 ```
 
@@ -79,7 +79,7 @@ The mount function accepts an express app, a path and configuration options (opt
 The following example will mount the carbone-copy-api at the root of the server.
 
 ```
-const carboneCopyApi = require('carbone-copy-api');
+const carboneCopyApi = require('@bcgov/carbone-copy-api');
 
 const app = express();
 app.use(bodyParser.json());
@@ -91,7 +91,7 @@ carboneCopyApi.mount(app, '/');
 The following example will mount the carbone-copy-api to an alternate path on the server.
 
 ```
-const carboneCopyApi = require('carbone-copy-api');
+const carboneCopyApi = require('@bcgov/carbone-copy-api');
 
 const options = {
    fileUploadsDir: '/tmp/my-application-holding/files',

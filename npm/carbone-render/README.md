@@ -12,7 +12,7 @@ This library will require LibreOffice installed.  It requires LibreOffice to do 
 ``` 
 npm i carbone-render
 ...
-const carboneRenderer = require('carbone-render');
+const carboneRenderer = require('@bcgov/carbone-render');
 ```
 
 #### startFactory
