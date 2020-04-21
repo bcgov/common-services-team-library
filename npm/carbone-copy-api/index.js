@@ -222,7 +222,7 @@ router.get('/fileTypes', async (req, res) => {
 });
 
 router.get('/health', (_req, res) => {
-  res.send(200);
+  res.sendStatus(200);
 });
 
 router.get('/docs', (_req, res) => {
@@ -245,7 +245,7 @@ router.get('/', (_req, res) => {
       {name: '/template', operations: ['POST']},
       {name: '/template/render', operations: ['POST']},
       {name: '/template/{id}', operations: ['GET', 'DELETE']},
-      {name: '/template/{id}/render', operations: ['GET']}
+      {name: '/template/{id}/render', operations: ['POST']}
     ]
   });
 });
@@ -301,7 +301,7 @@ module.exports = {
         mountPath = expressPath;
       }
     } else {
-      throw Error('Could not mount carbone-copy-api, path parameter is not a string.');
+      throw Error('Could not mount  copy-api, path parameter is not a string.');
     }
 
     try {

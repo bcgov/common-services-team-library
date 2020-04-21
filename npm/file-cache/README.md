@@ -19,7 +19,7 @@ The root directory for the file cache can be specified by an option (fileCachePa
 
 #### pass in option
 ```
-const FileCache = require('file-cache');
+const FileCache = require('@bcgov/file-cache');
 const fileCache = new FileCache({fileCachePath: '/var/usr/file-cache'});
 ```
 
@@ -27,13 +27,13 @@ const fileCache = new FileCache({fileCachePath: '/var/usr/file-cache'});
 ```
 export FILE_CACHE_PATH = '/var/usr/file-cache';
 ...
-const FileCache = require('file-cache');
+const FileCache = require('@bcgov/file-cache');
 const fileCache = new FileCache();
 ```
 
 #### default is operating system temp dir
 ```
-const FileCache = require('file-cache');
+const FileCache = require('@bcgov/file-cache');
 const fileCache = new FileCache();
 ```
 
@@ -43,7 +43,7 @@ const fileCache = new FileCache();
 Create a new fileCache object, the configured directory will be verified and created if required.  Will throw an Error if the directory does not exist and cannot be created.  
 
 ```
-const FileCache = require('file-cache');
+const FileCache = require('@bcgov/file-cache');
 const fileCache = new FileCache({fileCachePath: '/var/usr/file-cache'});
 ```
 
