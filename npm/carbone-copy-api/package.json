@@ -1,6 +1,6 @@
 {
   "name": "@bcgov/carbone-copy-api",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "Express API for calling Carbone with a file caching layer.",
   "main": "index.js",
   "directories": {
@@ -36,17 +36,17 @@
     "carbone-render"
   ],
   "dependencies": {
-    "@bcgov/carbone-render": "^1.0.2",
-    "@bcgov/file-cache": "^1.0.2",
-    "api-problem": "^6.0.1",
+    "@bcgov/carbone-render": "^2.0.0",
+    "@bcgov/file-cache": "^1.0.3",
+    "api-problem": "^6.1.4",
     "bytes": "^3.1.0",
     "express": "^4.17.1",
-    "fs-extra": "^8.1.0",
-    "mime-types": "^2.1.26",
+    "fs-extra": "^9.0.1",
+    "mime-types": "^2.1.27",
     "minimist": "^1.2.5",
     "multer": "^1.4.2",
-    "telejson": "^3.3.0",
-    "tmp": "^0.1.0",
-    "validator": "^12.2.0"
+    "telejson": "^5.0.2",
+    "tmp": "^0.2.1",
+    "validator": "^13.1.17"
   }
 }
