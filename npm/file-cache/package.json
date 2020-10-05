@@ -1,6 +1,6 @@
 {
   "name": "@bcgov/file-cache",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple file storage that generates hashes for stored files",
   "main": "index.js",
   "scripts": {
@@ -28,7 +28,7 @@
     "hash"
   ],
   "dependencies": {
-    "fs-extra": "^8.1.0",
-    "uuid": "^7.0.2"
+    "fs-extra": "^9.0.1",
+    "uuid": "^8.3.0"
   }
 }
