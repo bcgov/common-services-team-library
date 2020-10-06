@@ -1,6 +1,6 @@
 {
   "name": "doc-gen-api",
-  "version": "2.0.0",
+  "version": "2.1.1",
   "description": "Document Generation API",
   "main": "app.js",
   "scripts": {
@@ -25,7 +25,7 @@
     }
   ],
   "dependencies": {
-    "@bcgov/carbone-copy-api": "^2.0.0",
+    "@bcgov/carbone-copy-api": "~2.1.1",
     "api-problem": "^6.1.4",
     "body-parser": "^1.19.0",
     "express": "^4.17.1"
