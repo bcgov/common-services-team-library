@@ -1,14 +1,16 @@
-const bodyParser = require('body-parser');
+const compression = require('compression');
 const express = require('express');
 const Problem = require('api-problem');
 
 const carboneCopyApi = require('@bcgov/carbone-copy-api');
 
-let apiBasePath = process.env.API_PATH || '/';
+const apiBasePath = process.env.API_PATH || '/';
+const uploadFileSize = process.env.UPLOAD_FILE_SIZE || '25mb';
 
 const app = express();
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(compression());
+app.use(express.json({ limit: uploadFileSize }));
+app.use(express.urlencoded({ extended: true }));
 
 carboneCopyApi.mount(app, apiBasePath);
 
@@ -21,7 +23,7 @@ app.use((err, req, res, _next) => {
   if (err instanceof Problem) {
     err.send(res);
   } else {
-    new Problem(500, {details: (err.message) ? err.message : err}).send(res);
+    new Problem(500, { details: (err.message) ? err.message : err }).send(res);
   }
 });
 
@@ -48,4 +50,3 @@ function shutdown() {
 }
 
 module.exports = app;
-
