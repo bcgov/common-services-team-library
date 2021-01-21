@@ -1,0 +1,21 @@
+---
+name: Docker Image CI
+on:
+  - push
+  - pull_request
+jobs:
+  docker-build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: images/${{ matrix.image-name }}
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        image-name:
+          - alpine-node-libreoffice
+          - doc-gen-api
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag ${{ matrix.image-name }}:$(date +%s)
