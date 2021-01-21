@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:12
+FROM docker.io/node:lts-alpine
 
 ARG APP_ROOT=/opt/app-root/src
 ENV NO_UPDATE_NOTIFIER=true \
@@ -12,6 +12,6 @@ RUN apk --no-cache add bash libreoffice util-linux \
 && rm -rf /var/cache/apk/*
 
 # Fix Python/LibreOffice Integration
-COPY support ${APP_ROOT}/support 
+COPY support ${APP_ROOT}/support
 RUN chmod a+rx ${APP_ROOT}/support/bindPython.sh \
 && ${APP_ROOT}/support/bindPython.sh
