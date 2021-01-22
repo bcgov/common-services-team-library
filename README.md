@@ -1,5 +1,5 @@
 
-# Common Services Team Library [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+# Common Services Team Library [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE) [![img](https://img.shields.io/badge/Lifecycle-Stable-97ca00)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
 
 A collection of Dockerhub images and node libraries.
 
