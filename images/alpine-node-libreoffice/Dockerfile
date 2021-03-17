@@ -8,10 +8,13 @@ WORKDIR ${APP_ROOT}
 
 # Install LibreOffice & Common Fonts
 RUN apk --no-cache add bash libreoffice util-linux \
-  ttf-droid-nonlatin ttf-droid ttf-dejavu ttf-freefont ttf-liberation ttf-mscorefonts-installer \
-&& rm -rf /var/cache/apk/*
+  ttf-droid-nonlatin ttf-droid ttf-dejavu ttf-freefont ttf-liberation \
+  && rm -rf /var/cache/apk/*
+
+# Install Microsoft Core Fonts
+RUN apt install ttf-mscorefonts-installer
 
 # Fix Python/LibreOffice Integration
 COPY support ${APP_ROOT}/support
 RUN chmod a+rx ${APP_ROOT}/support/bindPython.sh \
-&& ${APP_ROOT}/support/bindPython.sh
+  && ${APP_ROOT}/support/bindPython.sh
