@@ -12,7 +12,9 @@ RUN apk --no-cache add bash libreoffice util-linux \
   && rm -rf /var/cache/apk/*
 
 # Install Microsoft Core Fonts
-RUN apt install ttf-mscorefonts-installer
+RUN apk --no-cache add msttcorefonts-installer fontconfig && \
+  update-ms-fonts && \
+  fc-cache -f
 
 # Fix Python/LibreOffice Integration
 COPY support ${APP_ROOT}/support
