@@ -170,7 +170,7 @@ const modelValidation = {
     }
     if (!models.carbone.options(obj.options)) {
       errors.push({value: obj.options, message: 'Invalid value `options`.'});
-    } else {
+    } else if(obj.options) {
       if (!models.carbone.convertTo(obj.options.convertTo)) {
         errors.push({value: obj.options.convertTo, message: 'Invalid value `options.convertTo`.'});
       }
