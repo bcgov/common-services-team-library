@@ -1,6 +1,6 @@
 {
   "name": "@bcgov/file-cache",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple file storage that generates hashes for stored files",
   "main": "index.js",
   "scripts": {
@@ -20,6 +20,10 @@
     {
       "name": "Jason Sherman",
       "email": "jsherman@parcsystems.ca"
+    },
+    {
+      "name": "Jeremy Ho",
+      "email": "jujaga@gmail.com"
     }
   ],
   "keywords": [
@@ -28,7 +32,7 @@
     "hash"
   ],
   "dependencies": {
-    "fs-extra": "^9.0.1",
-    "uuid": "^8.3.0"
+    "fs-extra": "^10.0.0",
+    "uuid": "^8.3.2"
   }
 }
