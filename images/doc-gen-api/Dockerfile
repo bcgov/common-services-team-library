@@ -1,4 +1,4 @@
-FROM docker.io/bcgovimages/alpine-node-libreoffice:v1.0.2
+FROM docker.io/bcgovimages/alpine-node-libreoffice:v1.0.3
 
 ARG APP_ROOT=/opt/app-root/src
 ENV NO_UPDATE_NOTIFIER=true \
@@ -6,7 +6,7 @@ ENV NO_UPDATE_NOTIFIER=true \
 WORKDIR ${APP_ROOT}
 
 # copy over our application code...
-COPY ./app .
+COPY app .
 # install it
 RUN npm ci
 
