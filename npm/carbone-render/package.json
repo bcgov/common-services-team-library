@@ -1,6 +1,6 @@
 {
   "name": "@bcgov/carbone-render",
-  "version": "2.1.2",
+  "version": "2.2.0",
   "description": "Async wrapper around Carbone render",
   "main": "index.js",
   "scripts": {
@@ -35,7 +35,7 @@
     "doc-generation"
   ],
   "dependencies": {
-    "carbone": "^2.1.1",
+    "carbone": "^3.1.0",
     "fs-extra": "^10.0.0",
     "uuid": "^8.3.2"
   }

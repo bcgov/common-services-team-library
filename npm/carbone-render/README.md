@@ -1,36 +1,47 @@
-## carbone-render
-Library to generate a document from an existing template and JSON data.  This is a wrapper around [carbone](https://carbone.io), please refer to their documentation for more detail.  
+# carbone-render
 
-### important
-This library will require LibreOffice installed.  It requires LibreOffice to do pdf generation.  
-  
+[![npm](https://img.shields.io/npm/v/@bcgov/carbone-render.svg)](https://www.npmjs.com/package/@bcgov/carbone-render)
+[![downloads](https://img.shields.io/npm/dm/@bcgov/carbone-render.svg)](https://npmcharts.com/compare/@bcgov/carbone-render?minimal=true)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![img](https://img.shields.io/badge/Lifecycle-Stable-97ca00)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
 
-### usage
+Library to generate a document from an existing template and JSON data.  This is a wrapper around [carbone](https://carbone.io), please refer to their documentation for more detail.
 
-#### install/initialize
+## Prerequisites
 
-``` 
+This library will require LibreOffice installed to do pdf generation.
+
+## Installation
+
+```sh
 npm i @bcgov/carbone-render
-...
+```
+
+## Usage
+
+```js
 const carboneRenderer = require('@bcgov/carbone-render');
 ```
 
-#### startFactory
-Optional call to start up the carbone python converter.  This is recommended to call on start of your application, otherwise, the first call to render will take longer as it starts the converter.  
+### startFactory
 
-``` 
+Optional call to start up the carbone python converter.  This is recommended to call on the start of your application. Otherwise, the first call to render will take longer as it starts the converter in the background.
+
+```js
 carboneRenderer.startFactory();
 ```
 
-#### fileTypes
-Return a dictionary of allowable file conversions.  Convert to pdf is always allowed.  
+### fileTypes
 
-``` 
+Return a dictionary of allowable file conversions.  Convert to pdf is always allowed.
+
+```js
 const allowedConversions = carboneRenderer.fileTypes;
 ```
 
-##### returns object
-```
+Returns dictionary
+
+```json
 {
     "csv": [
         "doc",
@@ -96,18 +107,19 @@ const allowedConversions = carboneRenderer.fileTypes;
 }
 ```
 
-#### async render
-Generate a new document from a template and JSON data.  Render the report.  
+### async render
 
-```
-const data = {            
+Generate a new document from a template and JSON data.  Render the report.
+
+```js
+const data = {
     "firstName": "Jane",
     "lastName": "Smith",
-    "title": "Who?"  	
+    "title": "Who?"
 };
-  
+
 const options = {
-    "convertTo": "pdf",           
+    "convertTo": "pdf",
     "reportName": "{d.firstName}-{d.lastName}.docx",
     "overwrite": "true",
     "cacheReport": "true"
@@ -116,10 +128,10 @@ const options = {
 const formatters = {
     // this formatter can be used in a template with {d.myBoolean:yesOrNo()}
     yesOrNo : function (data) { // data = d.myBoolean
-      if (this.lang === 'fr') {
-        return data === true ? 'oui' : 'non';
-      }
-      return data === true ? 'yes' : 'no';
+        if (this.lang === 'fr') {
+            return data === true ? 'oui' : 'non';
+        }
+        return data === true ? 'yes' : 'no';
     }
 };
 
@@ -135,14 +147,15 @@ const output = await carboneRenderer.render(template.path, data, options, format
 | options.reportName | Name of the generated report, should include expected extension. Can contain template placeholders, see carbone documentation. |
 | formatters | Object. Additional formatters to add to carbone.  See carbone documenation. |
 
-##### returns object
-```
-{ 
-    success: false, 
-    errorType: null, 
-    errorMsg: null, 
-    reportName: null, 
-    report: null
+Returns object
+
+```json
+{
+    "success": false,
+    "errorType": null,
+    "errorMsg": null,
+    "reportName": null,
+    "report": null
 }
 ```
 
@@ -153,6 +166,3 @@ const output = await carboneRenderer.render(template.path, data, options, format
 | errorMsg | string - error message if not successful. |
 | reportName | string - name of the generated report |
 | report | binary - generated file |
-
-
-
