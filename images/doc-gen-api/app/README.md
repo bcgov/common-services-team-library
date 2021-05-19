@@ -1,24 +1,26 @@
-## carbone-copy-app
-Node Express application that provides an interface for generating documents from templates and data.  It provides a local file storage cache that means callers do not have to upload the template for each render.  Callers should should store cache keys/hashes and check if templates exist before generation.  
+# doc-gen-api
 
-The most significant libraries used in this application are:  
-* [file-cache](https://www.npmjs.com/package/@bcgov/file-cache)  
-* [carbone-render](https://www.npmjs.com/package/@bcgov/carbone-render)  
-* [carbone-copy-api](https://www.npmjs.com/package/@bcgov/carbone-copy-api)  
+Node Express application that provides an interface for generating documents from templates and data.  It provides a local file storage cache that means callers do not have to upload the template for each render.  Callers should should store cache keys/hashes and check if templates exist before generation.
 
-Please review their documentation.  
+The most significant libraries used in this application are:
 
-### important
-This application will require LibreOffice installed - it requires LibreOffice to do pdf generation.  
+* [carbone-copy-api](https://www.npmjs.com/package/@bcgov/carbone-copy-api)
+  * [carbone-render](https://www.npmjs.com/package/@bcgov/carbone-render)
+  * [file-cache](https://www.npmjs.com/package/@bcgov/file-cache)
+
+Please review their documentation.
+
+## Prerequisites
+
+This library will require LibreOffice installed to do pdf generation.
 
 See image: [alpine-node-libreoffice](https://hub.docker.com/r/bcgovimages/alpine-node-libreoffice).
-  
 
-### usage
+## Usage
 
-### configuration
-Configuration is set by environment variables.  
+## Configuration
 
+Configuration is set by environment variables.
 
 | Variable | Notes |
 | --- | --- |
@@ -30,8 +32,9 @@ Configuration is set by environment variables.
 | API\_PATH | Path to mount carbone-copy-api.  Default is '/' (root of server). |
 | APP\_PORT | Port number to run express application.  Default is 8000. |
 
-#### environment variables example
-```
+### Example
+
+```sh
 export CACHE_DIR = '/tmp/my-application-holding/files'
 export UPLOAD_FIELD_NAME = 'templateFile'
 export UPLOAD_FILE_SIZE = '50MB'
@@ -43,7 +46,6 @@ export APP_PORT = 3030
 npm run start
 ```
 
+### API Documentation
 
-#### review api at /docs
-Once mounted, view the Open API spec at http://localhost:3030/api/v1/docs (if started like the above example). 
-
+Once mounted, you can view the OpenAPI spec at <http://localhost:3030/docs> (if started like the above example).
