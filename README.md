@@ -5,6 +5,26 @@ A collection of Dockerhub images and node libraries.
 
 To learn more about the **Common Services** that are available visit the [Common Services Showcase](https://bcgov.github.io/common-service-showcase/) page.
 
+## Libraries
+
+The following is a list of the packages currently in this repository:
+
+### Docker Images
+
+- [bcgovimages/alpine-node-libreoffice](images/alpine-node-libreoffice)
+  - [![version](https://img.shields.io/docker/v/bcgovimages/alpine-node-libreoffice.svg?sort=semver)](https://hub.docker.com/r/bcgovimages/alpine-node-libreoffice) [![pulls](https://img.shields.io/docker/pulls/bcgovimages/alpine-node-libreoffice.svg)](https://hub.docker.com/r/bcgovimages/alpine-node-libreoffice) [![size](https://img.shields.io/docker/image-size/bcgovimages/alpine-node-libreoffice.svg)](https://hub.docker.com/r/bcgovimages/alpine-node-libreoffice)
+- [bcgovimages/doc-gen-api](images/doc-gen-api)
+  - [![version](https://img.shields.io/docker/v/bcgovimages/doc-gen-api.svg?sort=semver)](https://hub.docker.com/r/bcgovimages/doc-gen-api) [![pulls](https://img.shields.io/docker/pulls/bcgovimages/doc-gen-api.svg)](https://hub.docker.com/r/bcgovimages/doc-gen-api) [![size](https://img.shields.io/docker/image-size/bcgovimages/doc-gen-api.svg)](https://hub.docker.com/r/bcgovimages/doc-gen-api)
+
+### NPM Packages
+
+- [@bcgov/carbone-copy-api](npm/carbone-copy-api)
+  - [![npm](https://img.shields.io/npm/v/@bcgov/carbone-copy-api.svg)](https://www.npmjs.com/package/@bcgov/carbone-copy-api) [![downloads](https://img.shields.io/npm/dm/@bcgov/carbone-copy-api.svg)](https://npmcharts.com/compare/@bcgov/carbone-copy-api?minimal=true)
+- [@bcgov/carbone-render](npm/carbone-render)
+  - [![npm](https://img.shields.io/npm/v/@bcgov/carbone-render.svg)](https://www.npmjs.com/package/@bcgov/carbone-render) [![downloads](https://img.shields.io/npm/dm/@bcgov/carbone-render.svg)](https://npmcharts.com/compare/@bcgov/carbone-render?minimal=true)
+- [@bcgov/file-cache](npm/file-cache)
+  - [![npm](https://img.shields.io/npm/v/@bcgov/file-cache.svg)](https://www.npmjs.com/package/@bcgov/file-cache) [![downloads](https://img.shields.io/npm/dm/@bcgov/file-cache.svg)](https://npmcharts.com/compare/@bcgov/file-cache?minimal=true)
+
 ## Directory Structure
 
     .github/                   - PR and Issue templates

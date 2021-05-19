@@ -1,6 +1,6 @@
 {
   "name": "@bcgov/file-cache",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Simple file storage that generates hashes for stored files",
   "main": "index.js",
   "scripts": {

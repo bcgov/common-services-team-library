@@ -1,6 +1,6 @@
 {
   "name": "doc-gen-api",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Document Generation API",
   "main": "app.js",
   "scripts": {
@@ -22,11 +22,15 @@
     {
       "name": "Jason Sherman",
       "email": "jsherman@parcsystems.ca"
+    },
+    {
+      "name": "Jeremy Ho",
+      "email": "jujaga@gmail.com"
     }
   ],
   "dependencies": {
-    "@bcgov/carbone-copy-api": "~2.1.1",
-    "api-problem": "^6.1.4",
+    "@bcgov/carbone-copy-api": "^2.2.0",
+    "api-problem": "^7.0.2",
     "compression": "^1.7.4",
     "express": "^4.17.1"
   },
