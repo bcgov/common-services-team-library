@@ -98,8 +98,8 @@ const resetFormatters = reset => {
   }
 };
 
-module.exports.startFactory = () => {
-  carbone.set({startFactory: true});
+module.exports.startFactory = (converterFactoryTimeout) => {
+  carbone.set({startFactory: true, converterFactoryTimeout: converterFactoryTimeout});
 };
 
 

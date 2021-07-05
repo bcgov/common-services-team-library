@@ -53,6 +53,7 @@ carboneCopyApi.init(options);
 
 ```sh
 export CACHE_DIR = '/tmp/my-application-holding/files'
+export CONVERTER_FACTORY_TIMEOUT = 6000
 export UPLOAD_FIELD_NAME = 'files'
 export UPLOAD_FILE_SIZE = '50MB'
 export UPLOAD_FILE_COUNT = 1

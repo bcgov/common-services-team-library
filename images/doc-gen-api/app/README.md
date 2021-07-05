@@ -36,6 +36,7 @@ Configuration is set by environment variables.
 
 ```sh
 export CACHE_DIR = '/tmp/my-application-holding/files'
+export CONVERTER_FACTORY_TIMEOUT = 6000
 export UPLOAD_FIELD_NAME = 'templateFile'
 export UPLOAD_FILE_SIZE = '50MB'
 export UPLOAD_FILE_COUNT = 1

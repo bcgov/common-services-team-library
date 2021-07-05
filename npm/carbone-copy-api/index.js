@@ -13,6 +13,7 @@ const carboneRenderer = require('@bcgov/carbone-render');
 const FileCache = require('@bcgov/file-cache');
 
 const CACHE_DIR = process.env.CACHE_DIR || '/tmp/carbone-files';
+const CONVERTER_FACTORY_TIMEOUT = process.env.CONVERTER_FACTORY_TIMEOUT || '6000';
 const UPLOAD_FIELD_NAME = process.env.UPLOAD_FIELD_NAME || 'template';
 const UPLOAD_FILE_SIZE = process.env.UPLOAD_FILE_SIZE || '25MB';
 const UPLOAD_FILE_COUNT = process.env.UPLOAD_FILE_COUNT || '1';
@@ -23,7 +24,8 @@ const DEFAULT_OPTIONS = {
   maxFileCount: UPLOAD_FILE_COUNT,
   maxFileSize: UPLOAD_FILE_SIZE,
   formFieldName: UPLOAD_FIELD_NAME,
-  startCarbone: START_CARBONE
+  startCarbone: START_CARBONE,
+  converterFactoryTimeout: CONVERTER_FACTORY_TIMEOUT
 };
 
 let fileCache;
@@ -266,7 +268,7 @@ module.exports = {
     fileUpload.init(_options);
 
     if (truthy('startCarbone', _options)) {
-      carboneRenderer.startFactory();
+      carboneRenderer.startFactory(_options.converterFactoryTimeout);
     }
     initialized = true;
   },
