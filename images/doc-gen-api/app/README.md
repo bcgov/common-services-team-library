@@ -25,6 +25,7 @@ Configuration is set by environment variables.
 | Variable | Notes |
 | --- | --- |
 | CACHE\_DIR | This is the root location to read/write files.  Error will be thrown if directory does not exist and cannot be created.  Default is operating system temp file location. |
+| CONVERTER\_FACTORY\_TIMEOUT | Timeout for the LibreOffice PDF conversion call.  Default is '60000' (60s). |
 | UPLOAD\_FIELD\_NAME | Field name for multipart form data upload when uploading templates via /template api.  Default is 'template' |
 | UPLOAD\_FILE\_SIZE | Limit size of template files. Uses the [bytes](https://www.npmjs.com/package/bytes) library for parsing values.  Default is '25MB'|
 | UPLOAD\_FILE\_COUNT | Limit the number of files uploaded per call.  Default is 1, not recommended to use any other value. |
@@ -36,6 +37,7 @@ Configuration is set by environment variables.
 
 ```sh
 export CACHE_DIR = '/tmp/my-application-holding/files'
+export CONVERTER_FACTORY_TIMEOUT = 60000
 export UPLOAD_FIELD_NAME = 'templateFile'
 export UPLOAD_FILE_SIZE = '50MB'
 export UPLOAD_FILE_COUNT = 1
