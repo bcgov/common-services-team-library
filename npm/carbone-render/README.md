@@ -1,4 +1,6 @@
-# carbone-render
+# [Deprecated] carbone-render
+
+*Note: This package has been deprecated and will no longer be receiving support updates.*
 
 [![npm](https://img.shields.io/npm/v/@bcgov/carbone-render.svg)](https://www.npmjs.com/package/@bcgov/carbone-render)
 [![downloads](https://img.shields.io/npm/dm/@bcgov/carbone-render.svg)](https://npmcharts.com/compare/@bcgov/carbone-render?minimal=true)

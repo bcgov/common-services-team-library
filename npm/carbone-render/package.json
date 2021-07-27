@@ -1,6 +1,6 @@
 {
   "name": "@bcgov/carbone-render",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "Async wrapper around Carbone render",
   "main": "index.js",
   "scripts": {
