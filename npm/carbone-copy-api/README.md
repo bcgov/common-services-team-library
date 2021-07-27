@@ -1,4 +1,6 @@
-# carbone-copy-api
+# [Deprecated] carbone-copy-api
+
+*Note: This package has been deprecated and will no longer be receiving support updates.*
 
 [![npm](https://img.shields.io/npm/v/@bcgov/carbone-copy-api.svg)](https://www.npmjs.com/package/@bcgov/carbone-copy-api)
 [![downloads](https://img.shields.io/npm/dm/@bcgov/carbone-copy-api.svg)](https://npmcharts.com/compare/@bcgov/carbone-copy-api?minimal=true)

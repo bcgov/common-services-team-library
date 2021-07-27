@@ -1,4 +1,6 @@
-# Document Generation API
+# [Deprecated] Document Generation API
+
+*Note: This image will no longer be receiving support updates as it has been succeeded by [common-document-generation-service](https://github.com/bcgov/common-document-generation-service). Please migrate to common-document-generation-service to continue receiving support updates.*
 
 [![version](https://img.shields.io/docker/v/bcgovimages/doc-gen-api.svg?sort=semver)](https://hub.docker.com/r/bcgovimages/doc-gen-api)
 [![pulls](https://img.shields.io/docker/pulls/bcgovimages/doc-gen-api.svg)](https://hub.docker.com/r/bcgovimages/doc-gen-api)

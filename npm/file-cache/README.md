@@ -1,4 +1,6 @@
-# file-cache
+# [Deprecated] file-cache
+
+*Note: This package has been deprecated and will no longer be receiving support updates.*
 
 [![npm](https://img.shields.io/npm/v/@bcgov/file-cache.svg)](https://www.npmjs.com/package/@bcgov/file-cache)
 [![downloads](https://img.shields.io/npm/dm/@bcgov/file-cache.svg)](https://npmcharts.com/compare/@bcgov/file-cache?minimal=true)
